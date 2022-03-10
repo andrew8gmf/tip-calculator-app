@@ -11,6 +11,8 @@ export class HomeComponent implements OnInit {
   billValue: number = 0;
   customTipValue: number = 1;
   peopleValue: number = 0;
+  amount: number = 0;
+  total: number = 0;
   
   constructor() { }
 
