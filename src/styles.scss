@@ -2,6 +2,23 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 
+html, body { height: 100%; }
+
+body {
+    align-items: center;
+    background: var(--grayish-cyan-light);
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+app-root {
+    color: var(--grayish-cyan-dark);
+    font-family: 'Space Mono', monospace;
+    height: 100%;
+    width: 100%;
+}
+
 :root {
     --cyan-strong: hsl(172, 67%, 45%);
     --cyan-very-dark: hsl(183, 100%, 15%);
