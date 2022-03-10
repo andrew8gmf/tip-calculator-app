@@ -112,7 +112,7 @@
             border-radius: 20px;
             background: var(--cyan-very-dark);
             justify-content: space-between;
-            padding: 25px;
+            padding: 35px;
 
             &__result {
                 display: flex;
@@ -122,12 +122,33 @@
                 &__total {
                     display: flex;
                     justify-content: space-between;
+                    align-items: center;
+                    min-width: 250px;
 
                     &__text {
                         display: flex;
                         flex-direction: column;
+
+                        &__title {
+                            color: var(--white);
+                            margin: 0;
+                        }
+
+                        &__subtitle {
+                            margin: 0;
+                        }
+                    }
+
+                    &__value {
+                        color: var(--cyan-strong);
+                        margin: 0;
                     }
                 }
+            }
+
+            &__button {
+                background: var(--cyan-strong);
+                color: var(--cyan-very-dark);
             }
         }
     }
