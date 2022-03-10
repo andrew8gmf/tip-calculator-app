@@ -42,7 +42,9 @@ export class HomeComponent implements OnInit {
   calculator() {
     var percent = this.billValue * this.tipValue;
     this.amount = percent / this.peopleValue;
-    
+    if (!isFinite(this.amount)) {
+      this.amount = 0;
+    }
     return this.amount;
   }
 
