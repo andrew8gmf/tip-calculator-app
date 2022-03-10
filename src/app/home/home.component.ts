@@ -25,12 +25,12 @@ export class HomeComponent implements OnInit {
   }
 
   onTip(value :any) {
-    this.tipValue = value;
+    this.tipValue = value * 0.01;
     this.calculator();
   }
 
   onCustomTip(event: any) {
-    this.tipValue = event.target.value;
+    this.tipValue = event.target.value * 0.01;
     this.calculator();
   }
 
