@@ -8,25 +8,25 @@
                 <label class="main__card__options__bill__title" for="bill">Bill</label>
                 <div class="main__card__options__bill__container">
                     <img class="main__card__options__bill__container__icon" src="assets/icon-dollar.svg" alt="Dollar">
-                    <input class="main__card__options__bill__container__input" id="bill" type="number" placeholder="0">
+                    <input class="main__card__options__bill__container__input" id="bill" type="number" placeholder="0" (keyup)="onBill($event)">
                 </div>
             </div>
             <div class="main__card__options__tip">
                 <h1 class="main__card__options__tip__title">Select Tip %</h1>
                 <div class="main__card__options__tip__container">
-                    <button class="main__card__options__tip__container__percent">5%</button>
-                    <button class="main__card__options__tip__container__percent">10%</button>
-                    <button class="main__card__options__tip__container__percent">15%</button>
-                    <button class="main__card__options__tip__container__percent">25%</button>
-                    <button class="main__card__options__tip__container__percent">50%</button>
-                    <input class="main__card__options__tip__container__custom" type="number" placeholder="Custom">
+                    <button class="main__card__options__tip__container__percent" (click)="onTip(5)">5%</button>
+                    <button class="main__card__options__tip__container__percent" (click)="onTip(10)">10%</button>
+                    <button class="main__card__options__tip__container__percent" (click)="onTip(15)">15%</button>
+                    <button class="main__card__options__tip__container__percent" (click)="onTip(25)">25%</button>
+                    <button class="main__card__options__tip__container__percent" (click)="onTip(50)">50%</button>
+                    <input class="main__card__options__tip__container__custom" type="number" placeholder="Custom" (keyup)="onCustomTip($event)">
                 </div>
             </div>
             <div class="main__card__options__people">
                 <label class="main__card__options__people__title" for="people">Number of People</label>
                 <div class="main__card__options__people__container">
                     <img class="main__card__options__people__container__icon" src="assets/icon-person.svg" alt="Person">
-                    <input class="main__card__options__people__container__input" id="people" type="number" placeholder="0">
+                    <input class="main__card__options__people__container__input" id="people" type="number" placeholder="0" (keyup)="onPeople($event)">
                 </div>
             </div>
         </div>
