@@ -8,9 +8,9 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  billValue: any;
-  customTipValue: any;
-  peopleValue: any;
+  billValue: number = 0;
+  customTipValue: number = 1;
+  peopleValue: number = 0;
   
   constructor() { }
 
