@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
 
   billValue: number = 0;
   tipValue: number = 0;
-  peopleValue: number = 0;
+  peopleValue: number = 1;
   amount: number = 0;
   total: number = 0;
   
@@ -44,7 +44,10 @@ export class HomeComponent implements OnInit {
     if (!isFinite(this.amount)) {
       this.amount = 0;
     }
-    return this.amount;
+
+    this.total = this.billValue / this.peopleValue + this.amount;
+
+    return this.amount, this.total;
   }
 
 }
