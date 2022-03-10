@@ -21,27 +21,26 @@ export class HomeComponent implements OnInit {
 
   onBill(event: any) {
     this.billValue = event.target.value;
-    if (this.billValue) {
-      console.log(this.billValue)
-    }
+    this.calculator();
   }
 
   onTip(value :any) {
     this.tipValue = value;
+    this.calculator();
   }
 
   onCustomTip(event: any) {
     this.tipValue = event.target.value;
-    if (this.tipValue) {
-      console.log(this.tipValue)
-    }
+    this.calculator();
   }
 
   onPeople(event: any) {
     this.peopleValue = event.target.value;
-    if (this.peopleValue) {
-      console.log(this.peopleValue)
-    }
+    this.calculator();
+  }
+
+  calculator() {
+    console.log("logic func!");
   }
 
 }
