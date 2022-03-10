@@ -3,8 +3,12 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
+
+    &__logo {
+        margin: auto;
+    }
 
     &__card {
         background: var(--white);
@@ -197,6 +201,20 @@
                     background: var(--grayish-cyan-light);
                     cursor: pointer;
                 }
+            }
+        }
+    }
+
+    .attribution {
+        margin: auto;
+        text-align: center;
+
+        &__link {
+            color: var(--cyan-very-dark);
+            text-decoration: none;
+
+            &:hover {
+                color: var(--cyan-strong);
             }
         }
     }
