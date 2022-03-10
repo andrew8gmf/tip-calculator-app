@@ -12,6 +12,11 @@ body {
     margin: 0;
 }
 
+input {
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+}
+
 app-root {
     color: var(--grayish-cyan-dark);
     font-family: 'Space Mono', monospace;
