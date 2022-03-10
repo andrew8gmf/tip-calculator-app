@@ -9,7 +9,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   billValue: number = 0;
-  customTipValue: number = 1;
+  tipValue: number = 1;
   peopleValue: number = 0;
   amount: number = 0;
   total: number = 0;
@@ -27,13 +27,13 @@ export class HomeComponent implements OnInit {
   }
 
   onTip(value :any) {
-    console.log(value);
+    this.tipValue = value;
   }
 
   onCustomTip(event: any) {
-    this.customTipValue = event.target.value;
-    if (this.customTipValue) {
-      console.log(this.customTipValue)
+    this.tipValue = event.target.value;
+    if (this.tipValue) {
+      console.log(this.tipValue)
     }
   }
 
