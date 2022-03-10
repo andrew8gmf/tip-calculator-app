@@ -9,7 +9,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   billValue: number = 0;
-  tipValue: number = 1;
+  tipValue: number = 0;
   peopleValue: number = 0;
   amount: number = 0;
   total: number = 0;
@@ -40,8 +40,7 @@ export class HomeComponent implements OnInit {
   }
 
   calculator() {
-    var percent = this.billValue * this.tipValue;
-    this.amount = percent / this.peopleValue;
+    this.amount = this.billValue * this.tipValue / this.peopleValue;
     if (!isFinite(this.amount)) {
       this.amount = 0;
     }
