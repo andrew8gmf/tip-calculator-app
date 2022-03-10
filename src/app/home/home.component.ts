@@ -40,7 +40,10 @@ export class HomeComponent implements OnInit {
   }
 
   calculator() {
-    console.log("logic func!");
+    var percent = this.billValue * this.tipValue;
+    this.amount = percent / this.peopleValue;
+    
+    return this.amount;
   }
 
 }
