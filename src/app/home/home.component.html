@@ -14,11 +14,11 @@
             <div class="main__card__options__tip">
                 <h1 class="main__card__options__tip__title">Select Tip %</h1>
                 <div class="main__card__options__tip__container">
-                    <button class="main__card__options__tip__container__percent" (click)="onTip(5)">5%</button>
-                    <button class="main__card__options__tip__container__percent" (click)="onTip(10)">10%</button>
-                    <button class="main__card__options__tip__container__percent" (click)="onTip(15)">15%</button>
-                    <button class="main__card__options__tip__container__percent" (click)="onTip(25)">25%</button>
-                    <button class="main__card__options__tip__container__percent" (click)="onTip(50)">50%</button>
+                    <button class="main__card__options__tip__container__percent" [ngClass]="{'active': tipValue == 0.05}" (click)="onTip(5)">5%</button>
+                    <button class="main__card__options__tip__container__percent" [ngClass]="{'active': tipValue == 0.10}" (click)="onTip(10)">10%</button>
+                    <button class="main__card__options__tip__container__percent" [ngClass]="{'active': tipValue == 0.15}" (click)="onTip(15)">15%</button>
+                    <button class="main__card__options__tip__container__percent" [ngClass]="{'active': tipValue == 0.25}" (click)="onTip(25)">25%</button>
+                    <button class="main__card__options__tip__container__percent" [ngClass]="{'active': tipValue == 0.50}" (click)="onTip(50)">50%</button>
                     <input class="main__card__options__tip__container__custom" type="number" placeholder="Custom" (keyup)="onCustomTip($event)">
                 </div>
             </div>
