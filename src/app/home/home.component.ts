@@ -50,4 +50,12 @@ export class HomeComponent implements OnInit {
     return this.amount, this.total;
   }
 
+  reset() {
+    this.billValue = 0;
+    this.tipValue = 0;
+    this.peopleValue = 1;
+    this.amount = 0;
+    this.total = 0;
+  }
+
 }
