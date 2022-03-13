@@ -13,6 +13,10 @@ export class HomeComponent implements OnInit {
   peopleValue: number = 1;
   amount: number = 0;
   total: number = 0;
+
+  billInputValue:any = '';
+  tipInputValue:any = '';
+  peopleInputValue:any = '';
   
   constructor() { }
 
@@ -59,6 +63,10 @@ export class HomeComponent implements OnInit {
     this.peopleValue = 1;
     this.amount = 0;
     this.total = 0;
+
+    this.billInputValue = null;
+    this.tipInputValue = null;
+    this.peopleInputValue = null;
   }
 
 }

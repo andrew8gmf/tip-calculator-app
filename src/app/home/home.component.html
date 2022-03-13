@@ -8,7 +8,7 @@
                 <label class="main__card__options__bill__title" for="bill">Bill</label>
                 <div class="main__card__options__bill__container">
                     <img class="main__card__options__bill__container__icon" src="assets/icon-dollar.svg" alt="Dollar">
-                    <input class="main__card__options__bill__container__input" id="bill" type="number" placeholder="0" (keyup)="onBill($event)">
+                    <input class="main__card__options__bill__container__input" id="bill" type="number" placeholder="0" (keyup)="onBill($event)" [(ngModel)]="billInputValue">
                 </div>
             </div>
             <div class="main__card__options__tip">
@@ -19,14 +19,14 @@
                     <button class="main__card__options__tip__container__percent" [ngClass]="{'active': tipValue == 0.15}" (click)="onTip(15)">15%</button>
                     <button class="main__card__options__tip__container__percent" [ngClass]="{'active': tipValue == 0.25}" (click)="onTip(25)">25%</button>
                     <button class="main__card__options__tip__container__percent" [ngClass]="{'active': tipValue == 0.50}" (click)="onTip(50)">50%</button>
-                    <input class="main__card__options__tip__container__custom" type="number" placeholder="Custom" (keyup)="onCustomTip($event)">
+                    <input class="main__card__options__tip__container__custom" type="number" placeholder="Custom" (keyup)="onCustomTip($event)" [(ngModel)]="tipInputValue">
                 </div>
             </div>
             <div class="main__card__options__people">
                 <label class="main__card__options__people__title" for="people">Number of People</label>
                 <div class="main__card__options__people__container">
                     <img class="main__card__options__people__container__icon" src="assets/icon-person.svg" alt="Person">
-                    <input class="main__card__options__people__container__input" id="people" type="number" placeholder="0" (keyup)="onPeople($event)">
+                    <input class="main__card__options__people__container__input" id="people" type="number" placeholder="0" (keyup)="onPeople($event)" [(ngModel)]="peopleInputValue">
                 </div>
             </div>
         </div>
