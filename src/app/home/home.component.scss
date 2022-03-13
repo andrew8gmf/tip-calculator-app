@@ -24,8 +24,9 @@
 
         &__options {
             background: var(--white);
-            padding: 15px;
+            justify-content: space-between;
             margin-right: 25px;
+            padding: 15px;
 
             &__bill,
             &__people {
@@ -47,8 +48,8 @@
                 }
 
                 &__container {
-                    display: flex;
                     align-items: center;
+                    display: flex;
 
                     &__icon {
                         margin-left: 10px;
@@ -69,9 +70,9 @@
                         }
     
                         &:focus {
-                            outline: none;
-                            box-shadow: none;
                             border: 2px solid var(--cyan-strong);
+                            box-shadow: none;
+                            outline: none;
                         }
 
                         &:hover {
@@ -104,8 +105,8 @@
                 margin: 30px 0;
 
                 &__title {
-                    margin: 0;
                     font-size: 16px;
+                    margin: 0;
                 }
 
                 &__container {
@@ -146,9 +147,9 @@
                         }
 
                         &:focus {
-                            outline: none;
-                            box-shadow: none;
                             border: 2px solid var(--cyan-strong);
+                            box-shadow: none;
+                            outline: none;
                         }
 
                         &:hover {
@@ -183,9 +184,9 @@
 
                 &__amount,
                 &__total {
+                    align-items: center;
                     display: flex;
                     justify-content: space-between;
-                    align-items: center;
                     min-width: 250px;
 
                     &__text {
