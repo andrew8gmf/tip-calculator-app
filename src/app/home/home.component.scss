@@ -14,7 +14,7 @@
         background: var(--white);
         border-radius: 20px;
         display: flex;
-        height: 400px;
+        height: 450px;
         padding: 25px;
 
         &__options,
@@ -186,6 +186,7 @@
             background: var(--cyan-very-dark);
             justify-content: space-between;
             padding: 35px;
+            width: 300px;
 
             &__result {
                 display: flex;
@@ -250,6 +251,7 @@
     .main {
         &__card {
             flex-direction: column;
+            height: auto;
             
             &__options {
                 &__tip {
@@ -265,6 +267,11 @@
                         }
                     }
                 }
+            }
+
+            &__values {
+                width: auto;
+                height: 350px;
             }
         }
     }
