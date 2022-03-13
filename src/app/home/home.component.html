@@ -23,10 +23,13 @@
                 </div>
             </div>
             <div class="main__card__options__people">
-                <label class="main__card__options__people__title" for="people">Number of People</label>
+                <div class="main__card__options__people__label">
+                    <label class="main__card__options__people__label__title" for="people">Number of People</label>
+                    <label class="main__card__options__people__label__title" for="people" [ngClass]="isZero ? 'visible' : 'hidden' ">Can't be zero</label>
+                </div>
                 <div class="main__card__options__people__container">
                     <img class="main__card__options__people__container__icon" src="assets/icon-person.svg" alt="Person">
-                    <input class="main__card__options__people__container__input" id="people" type="number" placeholder="0" (keyup)="onPeople($event)" [(ngModel)]="peopleInputValue">
+                    <input class="main__card__options__people__container__input" id="people" type="number" placeholder="0" (keyup)="onPeople($event)" [(ngModel)]="peopleInputValue" [ngClass]="{'warning': isZero}">
                 </div>
             </div>
         </div>

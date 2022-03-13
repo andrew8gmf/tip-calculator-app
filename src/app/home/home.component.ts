@@ -10,13 +10,15 @@ export class HomeComponent implements OnInit {
 
   billValue: number = 0;
   tipValue: number = 0;
-  peopleValue: number = 1;
+  peopleValue: number = 0;
   amount: number = 0;
   total: number = 0;
 
   billInputValue:any = '';
   tipInputValue:any = '';
   peopleInputValue:any = '';
+
+  isZero: boolean = false;
   
   constructor() { }
 
@@ -44,14 +46,16 @@ export class HomeComponent implements OnInit {
   }
 
   calculator() {
+    this.isZero = false;
+    if (this.peopleValue == 0) {
+      return this.isZero = true;
+    }
+
     this.amount = this.billValue * this.tipValue / this.peopleValue;
     if (!isFinite(this.amount)) {
       this.amount = 0;
     }
 
-    if (this.peopleValue == 0) {
-      this.peopleValue = 1;
-    }
     this.total = this.billValue / this.peopleValue + this.amount;
 
     return this.amount, this.total;
@@ -60,7 +64,7 @@ export class HomeComponent implements OnInit {
   reset() {
     this.billValue = 0;
     this.tipValue = 0;
-    this.peopleValue = 1;
+    this.peopleValue = 0;
     this.amount = 0;
     this.total = 0;
 
