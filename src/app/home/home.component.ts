@@ -45,6 +45,9 @@ export class HomeComponent implements OnInit {
       this.amount = 0;
     }
 
+    if (this.peopleValue == 0) {
+      this.peopleValue = 1;
+    }
     this.total = this.billValue / this.peopleValue + this.amount;
 
     return this.amount, this.total;
