@@ -52,6 +52,7 @@
                         color: var(--cyan-very-dark);
                         padding: 0 10px 0 30px;
                         text-align: right;
+                        width: 100%;
     
                         &::placeholder {
                             color: var(--grayish-cyan);
@@ -206,7 +207,7 @@
     }
 
     .attribution {
-        margin: auto;
+        margin: auto 20px;
         text-align: center;
 
         &__link {
@@ -215,6 +216,30 @@
 
             &:hover {
                 color: var(--cyan-strong);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .main {
+        &__card {
+            flex-direction: column;
+            
+            &__options {
+                &__tip {
+                    &__container {
+                        grid-template-columns: repeat(2,1fr);
+
+                        &__percent {
+                            width: 100%;
+                        }
+
+                        &__custom {
+                            width: calc(100% - 20px - 4px);
+                        }
+                    }
+                }
             }
         }
     }
