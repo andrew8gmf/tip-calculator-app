@@ -7,14 +7,15 @@
     width: 100%;
 
     &__logo {
-        margin: auto;
+        margin-top: auto;
+        padding: 50px 0;
     }
 
     &__card {
         background: var(--white);
         border-radius: 20px;
         display: flex;
-        height: 450px;
+        height: 440px;
         padding: 25px;
 
         &__options,
@@ -233,7 +234,8 @@
     }
 
     .attribution {
-        margin: auto 20px;
+        margin-bottom: auto;
+        padding: 50px 20px;
         text-align: center;
 
         &__link {
